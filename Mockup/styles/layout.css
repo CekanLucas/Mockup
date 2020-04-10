@@ -1,0 +1,156 @@
+html {
+  overflow-y: hidden;
+}
+
+main > section.sidebar, header.text-white{
+  background-color: rgb(26, 22, 45) !important;
+}
+
+#map {
+  /* white */
+  /* rga(40, 168, 224) */
+  /* rga(20, 0, 54) */
+  /* rga(225, 224, 0) */
+  /* rga(1, 229, 21) */
+  height: 100%;
+  width: 100%;
+  z-index: -1000;
+  filter: invert(1) blur(1.1px);
+}
+
+#map-container {
+  overflow-y: scroll;
+  height: 95vh;
+}
+
+main {
+  position: relative;
+  height: 100vh;
+}
+
+nav {
+  background-color: black;
+  background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+}
+
+.flex {
+  padding: 0.1vh 0.1vw;
+  width: 100%;
+}
+
+#form-msg,
+nav button,
+nav input,
+#logged-name {
+  margin: 0 0.2vw;
+}
+
+#logged-name {
+  color: gold;
+  font-weight: bolder;
+  text-shadow: 0.5px 0.5px #ff0;
+}
+
+/* Tweeter like map list */
+.map-grid {
+  color: #000;
+  border: 3px solid #fff;
+  border-radius: 15px;
+  margin: 1.5em;
+  position: relative;
+  text-align: left;
+}
+
+.map-grid h3.map-name {
+  font-weight: 700;
+  font-size: 1.5em;
+  padding-left: 3rem;
+  text-shadow: -1px -1px 0px aqua, 3px 3px 0px aqua, 6px 6px 0px aqua;
+}
+
+.map-grid span.user-handle {
+  margin: 1.5em 0;
+  padding-left: 5rem;
+  text-shadow: -1px -1px 0px aqua, 3px 3px 0px aqua, 6px 6px 0px aqua;
+}
+
+.map-grid .map-item,
+.map-grid .map-item > div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  box-sizing: border-box;
+  z-index: 1;
+  border: 3px solid #fff;
+  border-radius: 15px;
+  filter: invert(0.7) hue-rotate(122deg) contrast(2.4);
+}
+
+.map-grid a {
+  display: inline-block;
+  margin-top: 1em;
+  padding: 0 6.5vh;
+  color: #000;
+  margin-bottom: 0.5em;
+}
+
+.map-grid a[title='Add pins from Map'],
+.map-grid a[title='Delete Map'],
+.map-grid a[title='Remove Pins from Map'],
+.map-grid a[title='Edit Map'] {
+  display: none;
+}
+
+.map-grid *:hover {
+  text-shadow: 1px 0px 2px cyan, 0px 1px 2px cyan, -1px 0px 2px cyan, 0px -1px 2px cyan;
+}
+
+h3.map-name,
+span.user-handle,
+article.map-grid a {
+  position: relative;
+  z-index: 3;
+}
+
+#map-form {
+  text-align: center;
+  z-index: 1000;
+  position: absolute;
+  color: white;
+  background-color: black;
+  background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+  height: 100vh;
+  width: 100vw;
+}
+
+#map-form input, #map-form textarea {
+  display: block;
+  width: 100vw;
+}
+
+#map-form button, #map-form #create-map {
+  margin: none;
+}
+
+#map-form * {
+  margin: 1em 0;
+}
+
+#map-form textarea {
+  height: 30vh;
+}
+
+#map-form .gm-style .gm-style-iw-c, #map-form .gm-style img {
+  position: absolute;
+  box-sizing: border-box;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -100%);
+  background-color: white;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 2px 7px 1px rgba(0, 0, 0, 0.3);
+  filter: invert(1);
+}
